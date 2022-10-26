@@ -1,0 +1,21 @@
+My goal is to create a website for working on a computer. Typically, when
+I'm doing my school work or any sort of computer related task I have several
+different tabs and applications going: background music, a timer, and I've got
+my analog sticky notes with what I have to do. BUT what if they were all in one 
+place? Well i'm attemping to do exactly that with TUDU.
+
+Users will be able to submit a task which consists of: name, priority, notes, 
+due date, and category. Upon opening to the homepage the user will be greeted 
+with their in-progress tasks that can be sorted by priority, category, and due date.
+Tasks can be edited, viewed (focused on), and completed (deleted)
+
+If you're like me, you may look at a list and think "where do I even start??", 
+well lucky for you there will be a "random task" button that will choose from the
+active users in-progress tasks.
+
+Upon choosing a task to focus on the user is taken to a page with the title and
+notes of the app. This page will have a timer that they can set (and will alert
+the user when it counts all the way down to 0) and music player that can play
+chill lofi studying music. Upon completing a task, the user will be redirected to
+the homepage and the task will be deleted. I'm hoping to figure out a way to show
+how many tasks they have completed on the homepage as well.
