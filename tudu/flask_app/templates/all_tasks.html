@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background-color: gainsboro">
+    <div class="container mt-5">
+        <h2 class="text-primary">Welcome, {{user.first_name}}!</h2><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>All Tasks:</h4>
+                </div>
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4 p-2 d-flex justify-content-end">
+                    <a href="/tasks/create" class="btn btn-primary mr-2">Create</a>
+                    <a href="/logout" class="btn btn-success">Logout</a>
+                </div>
+                </div>
+            </div>
+        <div class="flex-container with-margins">
+            <table class="inline-flex w-100 mt-2 table table-striped table-bordered" style="background-color: #e9ecef">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Category</th>
+                        <th>Due Date</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in tasks %}
+                        <tr>
+                            <td>{{row.task_name}}</td>
+                            <td>{{row.priority}}</td>
+                            <td>{{row.category}}</td>
+                            <td>{{row.due_date}}</td>
+                            <td>
+                                    <a href="/tasks/view/{{ row.id }}">Show</a> | 
+                                    <a href="/tasks/edit/{{ row.id }}">Edit</a> | 
+                                    <a href="/tasks/delete/{{ row.id }}">Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </b-table>
+        </div>
+    </div>
+</body>
+</html>

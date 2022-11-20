@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus on Task</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background-color: gainsboro">
+    <div class="container mt-5" >
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Focus on Your Task</h3>
+                </div>
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4 p-2 d-flex justify-content-end">
+                    <a href="/tasks" class="btn btn-primary mr-2">Tasks</a>
+                    <a href="/logout" class="btn btn-success">Logout</a>
+                </div>
+                </div>
+            </div>
+
+        <div class="jumbotron">
+            <table class="inline-flex w-25 mt-2 table table-borderless">
+                <h1 class="display-4">{{ task.task_name }}</h1><br>
+                <p class="lead">“The future depends on what you do today.” - Mahatma Gandhi</p>
+                <hr class="my-4">
+
+                <h6>Priority:  {{ task.priority }}</h6><br>
+                <h6>Category:  {{ task.category }}</h6><br>
+                <h6>Due Date:  {{ task.due_date }}</h6><br>
+                <h6>Notes:  {{ task.notes }}</h6><br>
+            </table>
+            <p class="lead">
+                <a class="btn btn-danger btn-lg" href="/tasks/delete/{{ task.id }}" role="button" v-b-popover.hover.top="" title="WARNING:This will delete your task.">Complete Task</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
